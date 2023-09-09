@@ -1,8 +1,22 @@
+/*
+=====================================================================================================================================
+Name  :  11.c
+Author  :  Parag Dutt Sharma
+Description  :  Write a program to open a file, duplicate the file descriptor and append the file with both the descriptors and 
+		check whether the file is updated properly or not.
+		a. use dup
+		b. use dup2
+		c. use fcntl
+Date  :  8th September 2023
+=====================================================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<fcntl.h>
 #include<string.h>
+
 void appendDescriptorToFile(int fd, char *descriptorType) {
     char descriptor_str[20];
     snprintf(descriptor_str, sizeof(descriptor_str), "%s %d\n",descriptorType, fd);
@@ -24,7 +38,6 @@ int main() {
     }
    
     int dup_fd = dup(original_fd);
-
     
     int dup2_fd = dup2(original_fd, 3);
 

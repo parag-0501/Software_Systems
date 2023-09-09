@@ -1,3 +1,13 @@
+/*
+=====================================================================================================================================
+Name  :  16a.c
+Author  :  Parag Dutt Sharma
+Description  :  Write a program to perform mandatory locking.
+		a. Implement write lock
+Date  :  8th September 2023
+=====================================================================================================================================
+*/
+
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
@@ -15,7 +25,10 @@ int main(void) {
 	lock.l_len = 0;
 	lock.l_pid = getpid();
 	printf("Before Entering Critical Section...\n");
-	fcntl(fd, F_SETLKW, &lock);
+	if(fcntl(fd, F_SETLKW, &lock)==-1) {
+		close(fd);
+		return 0;
+	}
 	printf("Inside the critical section...\n");
 	printf("Enter to unlock...\n");
 	getchar();

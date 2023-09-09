@@ -1,3 +1,12 @@
+/*
+=====================================================================================================================================
+Name  :  12.c
+Author  :  Parag Dutt Sharma
+Description  :  Write a program to find out the opening mode of a file. Use fcntl.
+Date  :  8th September 2023
+=====================================================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>

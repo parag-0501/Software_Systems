@@ -1,3 +1,13 @@
+/*
+=====================================================================================================================================
+Name  :  18a.c
+Author  :  Parag Dutt Sharma
+Description  :  Write a program to perform Record locking.
+		a. Implement write lock
+Date  :  8th September 2023
+=====================================================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
