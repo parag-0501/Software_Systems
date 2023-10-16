@@ -1,4 +1,12 @@
-//dup2
+/*
+============================================================================
+Name : 17b.c
+Author : Parag Dutt Sharma
+Description : Write a program to execute ls -l | wc.
+		b. use dup2
+Date: 9th Oct, 2023.
+============================================================================
+*/
 
 #include <stdio.h>
 #include <stdlib.h>

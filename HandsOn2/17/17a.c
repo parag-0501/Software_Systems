@@ -1,4 +1,13 @@
-//dup
+/*
+============================================================================
+Name : 17a.c
+Author : Parag Dutt Sharma
+Description : Write a program to execute ls -l | wc.
+		a. use dup
+Date: 9th Oct, 2023.
+============================================================================
+*/
+
 
 #include <stdio.h>
 #include <stdlib.h>

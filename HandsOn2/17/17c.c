@@ -1,4 +1,12 @@
-//fcntl
+/*
+============================================================================
+Name : 17c.c
+Author : Parag Dutt Sharma
+Description : Write a program to execute ls -l | wc.
+		c. use fcntl
+Date: 9th Oct, 2023.
+============================================================================
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
