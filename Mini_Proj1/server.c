@@ -129,7 +129,7 @@ int main() {
 
 void service_client(int sock){
 	int func_id;
-	read(sock, &func_id, sizeof(int));//value of func_id will be given by client. read() is being done on sock
+	read(sock, &func_id, sizeof(int)); //value of func_id will be given by client. read() is being done on sock
 	printf("Client [%d] connected\n", sock);
 	while(1){		
 		if(func_id >=1 && func_id <= 3) {
@@ -169,16 +169,19 @@ int login(int sock, int role){
 	char *idPrefix;
 	if(role == 1) {
 		idPrefix = "AD";
-	} else if(role == 2) {
+	} 
+	else if(role == 2) {
 		idPrefix = "MT";
-	} else {
+	} 
+	else {
 		idPrefix = "FT";
 	}
 	int id;
 	if (strlen(login_id) >= 4 && strncmp(login_id, idPrefix, 2) == 0) {
     	char* number_str = login_id + 2; // Skip the first 2 characters ("MT")
     	id = atoi(number_str); // Convert the remaining characters to an integer
-    } else {
+    } 
+	else {
     	printf("Invalid login_id format\n");
     }
 	printf("Login id = %d \n", id);
